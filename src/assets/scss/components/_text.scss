@@ -1,0 +1,70 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2F2F2B;
+  line-height: 1.2;
+}
+
+.heading {
+  &--lg {
+    font-size: 36px;
+    font-family: 'Kritik-Trial';
+    font-weight: bold;
+    background: linear-gradient(180deg, #3A3A33 0%, #2F2F2B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media screen and (min-width: 1024px) {
+      font-size: 56px;
+    }
+  }
+  &--md {
+    color: #1D1B1B;
+    font-size: 30px;
+    font-weight: 700;
+    @media screen and (min-width: 1024px) {
+      font-size: 48px;
+    }
+  }
+  &--sm {
+    font-size: 16px;
+  }
+}
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-dark {
+  color: #0C0C4F;
+}
+
+.text-gray {
+  color: #A5A5A5;
+}
+
+.text-sm {
+  font-size: 14px !important;
+}
+
+.text-lg {
+  font-size: 18px !important;
+}
+
+.text-xl {
+  font-size: 24px !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}

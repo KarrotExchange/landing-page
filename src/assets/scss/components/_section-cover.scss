@@ -1,0 +1,71 @@
+.section-hero {
+  position: relative;
+  background-color: #F0F0F0;
+  .hero-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 15vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 99;
+  }
+  h1 {
+    font-family: 'Kritik-Trial';
+    font-weight: bold;
+    font-size: 100px;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    background: #CCCACA;
+    background: linear-gradient(180deg, #CCCACA 23.9%, rgba(210, 210, 210, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media screen and (min-width: 768px) {
+      font-size: 140px;
+    }
+    @media screen and (min-width: 1400px) {
+      font-size: 240px;
+    }
+  }
+  h2 {
+    font-family: 'Kritik-Trial';
+    margin-bottom: 0;
+    line-height: 1;
+    font-size: 35px;
+    font-weight: normal;
+  }
+  .blur-circle {
+    position: absolute;
+    width: 397px;
+    height: 397px;
+    background: rgba(7, 7, 7, 0.2);
+    filter: blur(118px);
+  }
+  .circle-1 {
+    top: 0;
+    left: 105%;
+  }
+  .circle-2 {
+    bottom: 0;
+    left: -5%;
+  }
+  .cover-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    max-width: 240px;
+    z-index: 999;
+    transform: translateX(-50%);
+    @media screen and (min-width: 768px) {
+      max-width: 360px;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 600px;
+    }
+    @media screen and (min-width: 1600px) {
+      max-width: 790px;
+    }
+  }
+}

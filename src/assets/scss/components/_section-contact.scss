@@ -1,0 +1,43 @@
+.section-contact {
+
+}
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  background: linear-gradient(140deg, #D4E3FF 0%, #F2E0FF 100%);
+  border-radius: 24px;
+  padding: 20px 16px;
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    gap: 40px;
+    padding: 44px 70px;
+    text-align: left;
+  }
+}
+
+.contact-icon {
+  display: flex;
+  padding: 16px;
+  width: 92px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 100%;
+  background: #FFF;
+}
+
+.contact-content {
+  a {
+    font-size: 20px;
+    font-weight: 600;
+    background: linear-gradient(180deg, #8152F8 0%, #1664BF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

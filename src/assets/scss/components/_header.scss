@@ -1,0 +1,160 @@
+.navbar {
+  position: absolute;
+  z-index: 998;
+  padding: 1rem 0.25rem;
+  // padding-top: .25rem;
+  // padding-bottom: .25rem;
+  width: 100%;
+
+  > .container {
+    @media (min-width: 1024px) {
+      display: flex;
+      align-items: center;
+      min-height: 3.25rem;
+      width: 100%;
+    }
+  }
+}
+
+.navbar-brand .navbar-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @media (max-width: 575.9px) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  &:first-child {
+    @media (min-width: 1024px) {
+      padding-left: 0;
+    }
+  }
+
+  &:last-child {
+    @media (min-width: 1024px) {
+      padding-right: 0;
+    }
+  }
+
+  .logo {
+    width: 120px;
+    @media (min-width: 576px) {
+      width: 150px;
+    }
+    max-height: none;
+    transition: transform .5s linear;
+  }
+}
+
+.navbar-brand,
+.navbar-tabs {
+  align-items: center;
+}
+
+.navbar-burger {
+  display: inline-block;
+  color: #ffffff !important;
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
+  svg {
+    width: 20px;
+  }
+}
+
+.navbar-nav {
+  @media screen and (min-width: 576px) {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: 1024px) {
+    justify-content: center;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.navbar-menu {
+  display: none;
+  transition: all .4s ease;
+
+  &.is-active {
+    display: block;
+  }
+
+  @media screen and (max-width: 1023px) {
+    padding: 20px 0;
+  }
+  @media screen and (min-width: 1024px) {
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: block;
+  }
+
+}
+
+.navbar-menu a.navbar-item,
+.navbar-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2F2F2B;
+  cursor: pointer;
+  margin: 0 1rem;
+  z-index: 99;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2F2F2B;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  &:focus,
+  &:focus-within,
+  &:hover,
+  &.is-active {
+    color: #2F2F2B;
+    font-weight: 500;
+    &:after {
+      @media (min-width: 1024px) {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.headroom--unpinned:not(.headroom--top),
+.headroom--pinned:not(.headroom--top) {
+  .navbar-brand .navbar-item .logo {
+    width: 80px;
+  }
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  min-height: 3.25rem;
+  @media (max-width: 1023.9px) {
+    width: 100%;
+  }
+}
+
+.button-wrapper {
+  margin-left: 20px;
+  @media (max-width: 1023.9px) {
+    display: none;
+  }
+}
+
