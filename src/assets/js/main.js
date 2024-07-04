@@ -1,6 +1,7 @@
 import jQuery from 'jquery'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import marquee from 'jquery.marquee'
 window.$ = window.jQuery = jQuery
 
 const karrot = ($ => {
@@ -9,6 +10,7 @@ const karrot = ($ => {
       AOS.init({
         duration: 1000
       })
+      this.marqueeRibbon()
       this.mobileMenu()
       this.animateScroll()
     },
@@ -55,7 +57,7 @@ const karrot = ($ => {
         updateActive(newActive)
       }
 
-      $(window).on('scroll', watchActive)
+      $(window).on('scroll', watchActive);
 
       $('body').on('click','[data-scroll-nav], [data-scroll-goto]', function(e){
         e.preventDefault()
@@ -64,6 +66,12 @@ const karrot = ($ => {
         doScroll(e)
       });
     },
+    marqueeRibbon() {
+      $('.marquee-ribbon').marquee({
+        duration: 10000,
+        duplicated: true
+      });
+    }
   }
 })( jQuery )
 

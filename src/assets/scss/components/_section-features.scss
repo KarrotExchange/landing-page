@@ -5,11 +5,14 @@
 
 .feature-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
   .feature-content {
     max-width: 580px;
     .sub-heading {
@@ -36,5 +39,9 @@
   }
   .feature-img {
     max-width: 517px;
+    width: 100%;
+    @media screen and (max-width: 768px) {
+      order: -1;
+    }
   }
 }

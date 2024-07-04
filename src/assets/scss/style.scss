@@ -518,6 +518,35 @@ img, video {
   animation: spin .5s linear 0s infinite;
 }
 
+.title-wrapper {
+  position: relative;
+  height: 280px;
+  margin-bottom: 30px;
+  h2 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 999;
+    transform: translateY(-50%) !important;
+  }
+  .js-marquee {
+    font-family: 'Kritik-Trial';
+    font-weight: bold;
+    font-size: 280px;
+    line-height: 280px;
+    letter-spacing: -0.05em;
+    background: #CCCACA;
+    background: linear-gradient(180deg, #CCCACA 23.9%, rgba(210, 210, 210, 0) 100%);
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    @media screen and (min-width: 1400px) {
+      font-size: 380px;
+      line-height: 280px;
+    }
+  }
+}
+
 @import './global/colors';
 @import './components/_button';
 @import './components/_text';
